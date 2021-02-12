@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ball in css</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .btns {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            text-align: center;
+            margin: 10px 0;
+        }
+        .btns button {
+            width: 70px;
+            height: 30px;
+        }
+        .img {
+            width: 100%;
+        }
+        #ball {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 300px;
+            left: 800px;
+        }
+    </style>
+    
+</head>
+
+<body>
+
+    <div class="img">
+        <img src="awesomeface.png" alt="" id="ball">
+    </div>
+
+    <div class="btns">
+        <button id="up">Up</button>
+        <button id="down">Down</button>
+        <button id="left">Left</button>
+        <button id="right">Right</button>
+    </div>
+
+    <script>
+
+        let ball = document.getElementById('ball')
+
+        function rotate_right () {
+            ball.style.transition = '2000ms'
+            ball.style.transform = 'rotate(720deg)'
+        }
+        function rotate_left () {
+            ball.style.transition = '2000ms'
+            ball.style.transform = 'rotate(-720deg)'
+
+        }
+
+        up.onclick = () => {
+            rotate_left()
+            ball.style.top = '0px'
+        }
+        down.onclick = () => {
+            rotate_right()
+            ball.style.top = '600px'
+        }
+        left.onclick = () => {
+            rotate_left()
+            ball.style.left = '0px'
+        }
+        right.onclick = () => {
+            rotate_right()
+            ball.style.left = '1500px'
+        }
+
+        // width: 200px;
+        // height: 200px;
+        // position: absolute;
+        // top: 300px;
+        // left: 800px
+
+
+    </script>
+</body>
+
+</html>
